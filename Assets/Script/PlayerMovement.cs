@@ -85,12 +85,12 @@ public class PlayerMovement : MonoBehaviour
         // ตรวจจับศัตรูในระยะโจมตี
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        // ทำดาเมจให้ศัตรูที่ถูกโจมตี
+      /*  // ทำดาเมจให้ศัตรูที่ถูกโจมตี
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("Hit " + enemy.name);
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage); // ตรวจสอบว่าศัตรูมีฟังก์ชัน TakeDamage
-        }
+        }*/
     }
 
     private void OnDrawGizmosSelected()

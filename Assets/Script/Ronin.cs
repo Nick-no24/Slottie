@@ -4,23 +4,19 @@ using UnityEngine;
 
 public class Ronin : Enemy
 {
-    [SerializeField] private Vector2 velocity; // ความเร็วการเคลื่อนที่
-    [SerializeField] private Transform[] movePoints; // จุดที่ศัตรูจะเดินถึง
-   // [SerializeField] private Rigidbody2D rb; // Rigidbody ของศัตรู
+    [SerializeField] private float speed = 1f;
+    [SerializeField] private Transform pointA;
+    [SerializeField] private Transform pointB;
+
+    private Vector3 currentPosition;
+    private Transform currentTarget;
+    private bool isMovingToB = true;
 
     private void Start()
     {
-        if (movePoints.Length < 2)
-        {
-            Debug.LogError("กรุณาเพิ่ม Move Points อย่างน้อย 2 จุด");
-            return;
-        }
-
-        // ตรวจสอบ Rigidbody
-        if (rb == null)
-        {
-            rb = GetComponent<Rigidbody2D>();
-        }
+        currentPosition = transform.position;
+        currentTarget = pointA;
+        Behavior();
     }
 
     private void FixedUpdate()
@@ -30,27 +26,38 @@ public class Ronin : Enemy
 
     private void Behavior()
     {
-        // เคลื่อนที่ศัตรู
-        rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+        MoveTowardsTarget();
+        CheckTargetReached();
+    }
 
-        // เปลี่ยนทิศทางเมื่อถึงจุดที่กำหนด
-        if (rb.position.x <= movePoints[0].position.x && velocity.x < 0)
+    private void MoveTowardsTarget()
+    {
+        // ค่อยๆเคลื่อนที่ไปยังจุดเป้าหมายด้วย Lerp()
+        currentPosition = Vector3.Lerp(currentPosition, currentTarget.position, speed * Time.deltaTime);
+        transform.position = currentPosition;
+    }
+
+    private void CheckTargetReached()
+    {
+        // ตรวจสอบว่าถึงจุดเป้าหมายหรือยัง
+        if (Vector3.Distance(currentPosition, currentTarget.position) < 0.1f)
         {
-            FlipCharacter();
+            SwitchTarget();
         }
-        else if (rb.position.x >= movePoints[1].position.x && velocity.x > 0)
-        {
-            FlipCharacter();
-        }
+    }
+
+    private void SwitchTarget()
+    {
+        // สลับจุดเป้าหมายระหว่าง A และ B
+        isMovingToB = !isMovingToB;
+        currentTarget = isMovingToB ? pointB : pointA;
+        FlipCharacter();
     }
 
     private void FlipCharacter()
     {
-        // เปลี่ยนทิศทางการเดิน
-        velocity *= -1;
-
-        // พลิกตัวละครในแกน X
-        Vector2 scale = transform.localScale;
+        // พลิกตัวละครให้หันไปตามทิศทาง
+        Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
     }
