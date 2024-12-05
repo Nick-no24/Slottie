@@ -14,14 +14,20 @@ public class PlayerMovement : MonoBehaviour
     private int jumpCount = 0; // นับจำนวนครั้งที่กระโดด
     public int maxJumpCount = 2; // จำนวนครั้งสูงสุดที่กระโดดได้ (ตั้งค่าได้ใน Inspector)
 
+    private void Start()
+    {
+        rb  = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         // รับค่า Input การเคลื่อนที่
         movement.x = Input.GetAxisRaw("Horizontal");
 
-      /*  // อัปเดต Animator Parameter
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Speed", Mathf.Abs(movement.x));*/
+       // อัปเดต Animator Parameter
+         animator.SetFloat("Horizontal", movement.x);
+         animator.SetFloat("Speed", Mathf.Abs(movement.x));
 
         // กระโดดเมื่อกด Spacebar และยังไม่เกินจำนวนครั้งที่กำหนด
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumpCount)
@@ -46,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // เคลื่อนที่ตัวละครในแนวนอน
         rb.velocity = new Vector2(movement.x * moveSpeed, rb.velocity.y);
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
