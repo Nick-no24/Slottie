@@ -4,40 +4,40 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f; // ความเร็วในการเคลื่อนที่
-    public float jumpForce = 10f; // แรงกระโดด
-    public Rigidbody2D rb; // อ้างอิงถึง Rigidbody2D ของตัวละคร
-    public Animator animator; // สำหรับควบคุม Animation
+    public float moveSpeed = 5f;
+    public float jumpForce = 10f;
+    public Rigidbody2D rb;
+    public Animator animator;
+    public float attackRange = 1f; // ระยะการโจมตี
+    public int attackDamage = 10; // ค่าดาเมจ
+    public Transform attackPoint; // จุดปล่อยการโจมตี
+    public LayerMask enemyLayers; // เลเยอร์ของศัตรู
 
     private Vector2 movement;
-    private bool facingRight = true; // สถานะการหันหน้าของตัวละคร (true = หันขวา)
-    private int jumpCount = 0; // นับจำนวนครั้งที่กระโดด
-    public int maxJumpCount = 2; // จำนวนครั้งสูงสุดที่กระโดดได้ (ตั้งค่าได้ใน Inspector)
+    private bool facingRight = true;
+    private int jumpCount = 0;
+    public int maxJumpCount = 2;
 
     private void Start()
     {
-        rb  = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        // รับค่า Input การเคลื่อนที่
         movement.x = Input.GetAxisRaw("Horizontal");
 
-       // อัปเดต Animator Parameter
-         animator.SetFloat("Horizontal", movement.x);
-         animator.SetFloat("Speed", Mathf.Abs(movement.x));
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Speed", Mathf.Abs(movement.x));
 
-        // กระโดดเมื่อกด Spacebar และยังไม่เกินจำนวนครั้งที่กำหนด
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumpCount)
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0f); // รีเซ็ตความเร็วแนวตั้งก่อนเพิ่มแรงกระโดด
+            rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            jumpCount++; // เพิ่มจำนวนครั้งที่กระโดด
+            jumpCount++;
         }
 
-        // ตรวจสอบการหันหน้าของตัวละคร
         if (movement.x > 0 && !facingRight)
         {
             Flip();
@@ -46,32 +46,58 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
+
+        // ตรวจจับคลิกซ้ายเพื่อโจมตี
+        if (Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
     }
 
     void FixedUpdate()
     {
-        // เคลื่อนที่ตัวละครในแนวนอน
         rb.velocity = new Vector2(movement.x * moveSpeed, rb.velocity.y);
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // ตรวจสอบการชนกับพื้น
         if (collision.gameObject.CompareTag("Ground"))
         {
-            jumpCount = 0; // รีเซ็ตจำนวนครั้งที่กระโดดเมื่อสัมผัสพื้น
+            jumpCount = 0;
         }
     }
 
     private void Flip()
     {
-        // เปลี่ยนทิศทางการหันหน้า
         facingRight = !facingRight;
-
-        // สลับค่า Scale ในแกน X
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+    }
+
+    private void Attack()
+    {
+        Debug.Log($"Click Attack");
+        // แสดง Animation การโจมตี
+        animator.SetTrigger("Attack");
+
+        // ตรวจจับศัตรูในระยะโจมตี
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+        // ทำดาเมจให้ศัตรูที่ถูกโจมตี
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            Debug.Log("Hit " + enemy.name);
+            enemy.GetComponent<Enemy>().TakeDamage(attackDamage); // ตรวจสอบว่าศัตรูมีฟังก์ชัน TakeDamage
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

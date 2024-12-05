@@ -4,7 +4,55 @@ using UnityEngine;
 
 public class Ronin : Enemy
 {
-    
+    [SerializeField] private float speed = 1f;
+    [SerializeField] private Transform pointA;
+    [SerializeField] private Transform pointB;
+
+    private Vector3 currentPosition;
+    private Transform currentTarget;
+    private bool isMovingToB = true;
+
+    private void Start()
+    {
+        currentPosition = transform.position;
+        currentTarget = pointA;
+        Behavior();
+    }
+
+    private void Behavior()
+    {
+        MoveTowardsTarget();
+        CheckTargetReached();
+    }
+
+    private void MoveTowardsTarget()
+    {
+        currentPosition = Vector3.Lerp(currentPosition, currentTarget.position, speed * Time.deltaTime);
+        transform.position = currentPosition;
+    }
+
+    private void CheckTargetReached()
+    {
+        if (Vector3.Distance(currentPosition, currentTarget.position) < 0.1f)
+        {
+            SwitchTarget();
+        }
+    }
+
+    private void SwitchTarget()
+    {
+        isMovingToB = !isMovingToB;
+        currentTarget = isMovingToB ? pointB : pointA;
+        FlipCharacter();
+    }
+
+    private void FlipCharacter()
+    {
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
+    /*
     [SerializeField] private Vector2 velocity;
     [SerializeField] private Transform[] movePoints;
 
@@ -35,4 +83,8 @@ public class Ronin : Enemy
         scale.x *= -1;
         transform.localScale = scale;
     }
+    */
+
+
+
 }
