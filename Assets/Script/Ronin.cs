@@ -1,54 +1,56 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Ronin : Enemy
 {
-    [SerializeField] private float speed = 1f;
-    [SerializeField] private Transform pointA;
-    [SerializeField] private Transform pointB;
-
-    private Vector3 currentPosition;
-    private Transform currentTarget;
-    private bool isMovingToB = true;
+    [SerializeField] private Vector2 velocity; // ความเร็วการเคลื่อนที่
+    [SerializeField] private Transform[] movePoints; // จุดที่ศัตรูจะเดินถึง
+   // [SerializeField] private Rigidbody2D rb; // Rigidbody ของศัตรู
 
     private void Start()
     {
-        currentPosition = transform.position;
-        currentTarget = pointA;
+        if (movePoints.Length < 2)
+        {
+            Debug.LogError("กรุณาเพิ่ม Move Points อย่างน้อย 2 จุด");
+            return;
+        }
+
+        // ตรวจสอบ Rigidbody
+        if (rb == null)
+        {
+            rb = GetComponent<Rigidbody2D>();
+        }
+    }
+
+    private void FixedUpdate()
+    {
         Behavior();
     }
 
     private void Behavior()
     {
-        MoveTowardsTarget();
-        CheckTargetReached();
-    }
+        // เคลื่อนที่ศัตรู
+        rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
 
-    private void MoveTowardsTarget()
-    {
-        currentPosition = Vector3.Lerp(currentPosition, currentTarget.position, speed * Time.deltaTime);
-        transform.position = currentPosition;
-    }
-
-    private void CheckTargetReached()
-    {
-        if (Vector3.Distance(currentPosition, currentTarget.position) < 0.1f)
+        // เปลี่ยนทิศทางเมื่อถึงจุดที่กำหนด
+        if (rb.position.x <= movePoints[0].position.x && velocity.x < 0)
         {
-            SwitchTarget();
+            FlipCharacter();
         }
-    }
-
-    private void SwitchTarget()
-    {
-        isMovingToB = !isMovingToB;
-        currentTarget = isMovingToB ? pointB : pointA;
-        FlipCharacter();
+        else if (rb.position.x >= movePoints[1].position.x && velocity.x > 0)
+        {
+            FlipCharacter();
+        }
     }
 
     private void FlipCharacter()
     {
-        Vector3 scale = transform.localScale;
+        // เปลี่ยนทิศทางการเดิน
+        velocity *= -1;
+
+        // พลิกตัวละครในแกน X
+        Vector2 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
     }
