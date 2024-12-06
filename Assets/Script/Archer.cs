@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Acher : Enemy, IShootable
+public class Croccodile : Enemy, IShootable
 {
     [SerializeField] private float attackRange;
     public Player player;
@@ -41,8 +41,8 @@ public class Acher : Enemy, IShootable
         {
             anim.SetTrigger("Shoot");
             GameObject obj = Instantiate(Bullets, BulletSpawnPoint.position, Quaternion.identity);
-          //  Rock rock = obj.GetComponent<Rock>();
-          //  rock.Innit(20, this);
+           // Rock rock = obj.GetComponent<Rock>();
+           // rock.Innit(20, this);
         }
     }
     public void Start()
