@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ronin : Enemy
 {
+    public HealthBar healthBar;
     public Transform pointA; // จุดที่ 1
     public Transform pointB; // จุดที่ 2
     public float speed = 2f; // ความเร็วในการเดิน

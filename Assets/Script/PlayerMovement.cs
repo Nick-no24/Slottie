@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public int attackDamage = 10; // ค่าดาเมจ
     public Transform attackPoint; // จุดปล่อยการโจมตี
     public LayerMask enemyLayers; // เลเยอร์ของศัตรู
+    public HealthBar healthBar;
+    public HealthBar HealthBar { get; set; }//Hpbar
 
     // ค่าพลังชีวิต
     public int maxHealth = 100;

@@ -250,6 +250,14 @@ MonoBehaviour:
   jumpForce: 10
   rb: {fileID: 702631097547054628}
   animator: {fileID: 0}
+  attackRange: 1
+  attackDamage: 10
+  attackPoint: {fileID: 0}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 1024
+  HealthBar: {fileID: 0}
+  maxHealth: 100
   maxJumpCount: 2
 --- !u!50 &702631097547054628
 Rigidbody2D:
