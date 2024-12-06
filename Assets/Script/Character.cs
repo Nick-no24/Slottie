@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public abstract class Character : MonoBehaviour
 {
     [SerializeField] private int health;
-   
     public int Health
     {
         get
@@ -18,16 +17,11 @@ public class Character : MonoBehaviour
             health = value;
         }
     }
-    
-    
 
     public Animator anim;
     public Rigidbody2D rb;
 
-    public void Init(int _health)
-    {
-        Health = _health;
-    }
+    public HealthBar healthBar;
     public void Destroy()
     {
         if (IsDead())
@@ -43,7 +37,11 @@ public class Character : MonoBehaviour
     {
         Health -= damage;
         Debug.Log($"TakeDamage :{damage} HpRemainnig : {Health}");
-        
+        healthBar.UpdateHealthBar(Health);
     }
-    
+    public void Innit(int newHealth)
+    {
+        Health = newHealth;
+        healthBar.SetMaxHealth(newHealth);
+    }
 }

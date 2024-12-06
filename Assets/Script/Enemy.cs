@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public   class Enemy : Character
+public abstract class Enemy : Character
 {
     private int damageHit;
     public int DamageHit
@@ -19,10 +19,12 @@ public   class Enemy : Character
 
     private void Start()
     {
-       
+        Behavior();
     }
 
-    
+    public abstract void Behavior();
+
+
+
 
 }
-

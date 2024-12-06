@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
-    private int damage;
+    [SerializeField] private int damage;
     public int Damage
     {
         get
@@ -35,7 +37,7 @@ public abstract class Weapon : MonoBehaviour
     {
         float shootDir = shooter.BulletSpawnPoint.position.x - shooter.BulletSpawnPoint.parent.position.x;
         if (shootDir < 0)
-            return -1; //??????
+            return -1; //หันขวา
         else return 1;
     }
 

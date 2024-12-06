@@ -2,17 +2,55 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Character
+public class Player : Character, IShootable
 {
-    // Start is called before the first frame update
-    void Start()
+    [field: SerializeField] public GameObject Bullets { get; set; }
+    [field: SerializeField] public Transform BulletSpawnPoint { get; set; }
+
+    [field: SerializeField] public float BulletSpawntime { get; set; }
+    [field: SerializeField] public float BulletTimer { get; set; }
+
+    public void Shoot()
     {
-        Init(3);
+        //Leftclickshoot
+        if (Input.GetButtonDown("Fire1") && BulletTimer <= 0)
+        {
+            GameObject obj = Instantiate(Bullets, BulletSpawnPoint.position, Quaternion.identity);
+            Banana banana = obj.GetComponent<Banana>();
+            banana.Innit(10, this);
+
+            BulletTimer = BulletSpawntime;
+
+        }
+
     }
 
-    // Update is called once per frame
+    private void FixedUpdate()
+    {
+        BulletTimer -= Time.deltaTime;
+
+
+
+    }
+    public void Onhitwith()
+    {
+
+    }
+
     void Update()
     {
-        
+        Shoot();
+        Destroy();
     }
+    public void Start()
+    {
+        Innit(100);
+
+    }
+
+
+
+
+
+
 }
