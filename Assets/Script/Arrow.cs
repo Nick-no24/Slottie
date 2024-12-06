@@ -7,7 +7,7 @@ public class Arrow : MonoBehaviour
 
     public float speed = 10f; // ความเร็วลูกธนู
     public float lifeTime = 5f; // เวลาที่ลูกธนูจะหายไป
-    public int damage = 1; // ความเสียหายที่สร้าง
+    public int damage = 10; // ความเสียหายที่สร้าง
 
    
 

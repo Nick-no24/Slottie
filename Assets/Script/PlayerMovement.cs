@@ -13,6 +13,10 @@ public class PlayerMovement : MonoBehaviour
     public Transform attackPoint; // จุดปล่อยการโจมตี
     public LayerMask enemyLayers; // เลเยอร์ของศัตรู
 
+    // ค่าพลังชีวิต
+    public int maxHealth = 100;
+    private int currentHealth;
+
     private Vector2 movement;
     private bool facingRight = true;
     private int jumpCount = 0;
@@ -22,12 +26,13 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        currentHealth = maxHealth; // ตั้งค่าพลังชีวิตเริ่มต้น
     }
 
     void Update()
     {
+        // การเคลื่อนที่
         movement.x = Input.GetAxisRaw("Horizontal");
-
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Speed", Mathf.Abs(movement.x));
 
@@ -38,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
             jumpCount++;
         }
 
+        // การเปลี่ยนทิศทาง
         if (movement.x > 0 && !facingRight)
         {
             Flip();
@@ -47,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
-        // ตรวจจับคลิกซ้ายเพื่อโจมตี
+        // การโจมตี
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
@@ -81,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Click Attack");
 
         // แสดง Animation การโจมตี
-      //*****  animator.SetTrigger("Attack");
+       //***** animator.SetTrigger("Attack");
 
         // ตรวจจับศัตรูในระยะโจมตี
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -97,6 +103,36 @@ public class PlayerMovement : MonoBehaviour
                 enemyScript.TakeDamage(attackDamage);
             }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Arrow")) // ตรวจสอบว่าเป็นลูกธนู
+        {
+            if (collision.TryGetComponent(out Arrow arrow))
+            {
+                TakeDamage(arrow.damage); // รับค่าดาเมจจากลูกธนู
+            }
+            Destroy(collision.gameObject); // ลบลูกธนูหลังจากโดน Player
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        Debug.Log("Player took damage. Current health: " + currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Debug.Log("Player Died");
+        // คุณสามารถเพิ่ม Animation หรือเปลี่ยน Scene ได้ที่นี่
+        // Destroy(gameObject); // ลบ Player ออกจากเกม
     }
 
     private void OnDrawGizmosSelected()
