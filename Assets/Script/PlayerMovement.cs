@@ -78,19 +78,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void Attack()
     {
-        Debug.Log($"Click Attack");
+        Debug.Log("Click Attack");
+
         // แสดง Animation การโจมตี
-        animator.SetTrigger("Attack");
+      //*****  animator.SetTrigger("Attack");
 
         // ตรวจจับศัตรูในระยะโจมตี
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-      /*  // ทำดาเมจให้ศัตรูที่ถูกโจมตี
+        // ทำดาเมจให้ศัตรูที่ถูกโจมตี
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("Hit " + enemy.name);
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage); // ตรวจสอบว่าศัตรูมีฟังก์ชัน TakeDamage
-        }*/
+
+            // ตรวจสอบว่า Enemy มีฟังก์ชัน TakeDamage แล้วเรียกใช้งาน
+            if (enemy.TryGetComponent(out Enemy enemyScript))
+            {
+                enemyScript.TakeDamage(attackDamage);
+            }
+        }
     }
 
     private void OnDrawGizmosSelected()
@@ -98,6 +104,7 @@ public class PlayerMovement : MonoBehaviour
         if (attackPoint == null)
             return;
 
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

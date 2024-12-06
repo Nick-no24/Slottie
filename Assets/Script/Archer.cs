@@ -1,19 +1,28 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Archer : MonoBehaviour
 {
+    public Animator animator;
+    public GameObject projectilePrefab;
+    public Transform firePoint;
+    public float shootDelay = 1f;
 
-    public Animator animator; // ÕÈ“ß∂÷ß Animator
-    public GameObject projectilePrefab; // Prefab ¢Õß≈Ÿ°∏πŸ
-    public Transform firePoint; // ®ÿ¥∑’Ë≈Ÿ°∏πŸ®–ÕÕ°
-    public float shootDelay = 1f; // √–¬–‡«≈“√–À«Ë“ß¬‘ß·µË≈–§√—Èß
-    private bool isShooting = false; // µ√«® Õ∫«Ë“°”≈—ß¬‘ßÀ√◊Õ‰¡Ë
+    // ‡∏£‡∏∞‡∏ö‡∏ö‡πÄ‡∏•‡∏∑‡∏≠‡∏î
+    public int maxHealth = 50;
+    private int currentHealth;
+
+    private bool isShooting = false;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) // µ√«®®—∫«Ë“ºŸÈ‡≈Ëπ‡¢È“„°≈È
+        if (collision.CompareTag("Player"))
         {
             StartShooting();
         }
@@ -21,7 +30,7 @@ public class Archer : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) // µ√«®®—∫«Ë“ºŸÈ‡≈ËπÕÕ°®“°√–¬–
+        if (collision.CompareTag("Player"))
         {
             StopShooting();
         }
@@ -32,15 +41,15 @@ public class Archer : MonoBehaviour
         if (!isShooting)
         {
             isShooting = true;
-            animator.SetBool("IsShooting", true); // ‡≈Ëπ Animation Shoot
-            InvokeRepeating("Shoot", 0f, shootDelay); // ¬‘ß∑ÿ°Ê shootDelay «‘π“∑’
+            animator.SetBool("IsShooting", true);
+            InvokeRepeating("Shoot", 0f, shootDelay);
         }
     }
 
     void StopShooting()
     {
         isShooting = false;
-        animator.SetBool("IsShooting", false); // °≈—∫‰ª Animation Idle
+        animator.SetBool("IsShooting", false);
         CancelInvoke("Shoot");
     }
 
@@ -48,7 +57,88 @@ public class Archer : MonoBehaviour
     {
         if (projectilePrefab != null && firePoint != null)
         {
-            Instantiate(projectilePrefab, firePoint.position, firePoint.rotation); //  √È“ß≈Ÿ°∏πŸ
+            Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         }
     }
+
+    // ‡∏ü‡∏±‡∏á‡∏Å‡πå‡∏ä‡∏±‡∏ô‡∏£‡∏±‡∏ö‡∏î‡∏≤‡πÄ‡∏°‡∏à
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        Debug.Log($"TakeDamage: {damage} HpRemaining: {currentHealth}");
+
+        // ‡∏ï‡∏£‡∏ß‡∏à‡∏™‡∏≠‡∏ö‡∏ß‡πà‡∏≤‡πÄ‡∏•‡∏∑‡∏≠‡∏î‡∏´‡∏°‡∏î
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    // ‡∏ü‡∏±‡∏á‡∏Å‡πå‡∏ä‡∏±‡∏ô‡∏ï‡∏≤‡∏¢
+    private void Die()
+    {
+        Debug.Log($"{gameObject.name} has died!");
+
+        // ‡πÄ‡∏•‡πà‡∏ô‡πÅ‡∏≠‡∏ô‡∏¥‡πÄ‡∏°‡∏ä‡∏±‡∏ô‡∏ï‡∏≤‡∏¢ (‡∏ñ‡πâ‡∏≤‡∏°‡∏µ)
+        if (animator != null)
+        {
+            animator.SetTrigger("Die");
+        }
+
+        // ‡∏õ‡∏¥‡∏î Collider ‡πÄ‡∏û‡∏∑‡πà‡∏≠‡∏õ‡πâ‡∏≠‡∏á‡∏Å‡∏±‡∏ô‡∏Å‡∏≤‡∏£‡∏ä‡∏ô‡∏ã‡πâ‡∏≥
+        Collider2D collider = GetComponent<Collider2D>();
+        if (collider != null)
+        {
+            collider.enabled = false;
+        }
+
+        // ‡∏ó‡∏≥‡∏•‡∏≤‡∏¢‡∏ß‡∏±‡∏ï‡∏ñ‡∏∏‡∏´‡∏•‡∏±‡∏á‡πÅ‡∏≠‡∏ô‡∏¥‡πÄ‡∏°‡∏ä‡∏±‡∏ô‡∏à‡∏ö (‡πÄ‡∏ä‡πà‡∏ô 1 ‡∏ß‡∏¥‡∏ô‡∏≤‡∏ó‡∏µ)
+        Destroy(gameObject, 1f);
+    }
+    /*
+    public Animator animator; 
+    public GameObject projectilePrefab; 
+    public Transform firePoint; 
+    public float shootDelay = 1f; 
+    private bool isShooting = false; 
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player")) 
+        {
+            StartShooting();
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player")) 
+        {
+            StopShooting();
+        }
+    }
+
+    void StartShooting()
+    {
+        if (!isShooting)
+        {
+            isShooting = true;
+            animator.SetBool("IsShooting", true); 
+            InvokeRepeating("Shoot", 0f, shootDelay); 
+        }
+    }
+
+    void StopShooting()
+    {
+        isShooting = false;
+        animator.SetBool("IsShooting", false); 
+    }
+
+    void Shoot()
+    {
+        if (projectilePrefab != null && firePoint != null)
+        {
+            Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+        }
+    }*/
 }
