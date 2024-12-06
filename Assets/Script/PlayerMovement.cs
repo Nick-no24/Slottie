@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public float attackRange = 1f; // ระยะการโจมตี
-    public int attackDamage = 10; // ค่าดาเมจ
     public Transform attackPoint; // จุดปล่อยการโจมตี
     public LayerMask enemyLayers; // เลเยอร์ของศัตรู
     public HealthBar healthBar;
@@ -18,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // ค่าพลังชีวิต
     public int maxHealth = 100;
     private int currentHealth;
-
+    
     private Vector2 movement;
     private bool facingRight = true;
     private int jumpCount = 0;
@@ -102,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
             // ตรวจสอบว่า Enemy มีฟังก์ชัน TakeDamage แล้วเรียกใช้งาน
             if (enemy.TryGetComponent(out Enemy enemyScript))
             {
-                enemyScript.TakeDamage(attackDamage);
+                
             }
         }
     }
@@ -134,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("Player Died");
         // คุณสามารถเพิ่ม Animation หรือเปลี่ยน Scene ได้ที่นี่
-        // Destroy(gameObject); // ลบ Player ออกจากเกม
+        Destroy(gameObject); // ลบ Player ออกจากเกม
     }
 
     private void OnDrawGizmosSelected()

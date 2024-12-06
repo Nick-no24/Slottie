@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ronin : Enemy
+/*public class Ronin : Enemy
 {
     public HealthBar healthBar;
     public Transform pointA; // จุดที่ 1
@@ -39,6 +39,10 @@ public class Ronin : Enemy
 
         if (distanceToPlayer <= attackRange)
         {
+          if (animator != null)
+            {
+                animator.SetBool("isWalking", false);
+            }  
             // อยู่ในระยะโจมตี
             Attack();
         }
@@ -46,6 +50,7 @@ public class Ronin : Enemy
         {
             // เดินไปตามเส้นทาง
             Patrol();
+            
         }
     }
 
@@ -53,10 +58,14 @@ public class Ronin : Enemy
     {
         // เดินไปยังจุดเป้าหมาย
         transform.position = Vector2.MoveTowards(transform.position, targetPoint.position, speed * Time.deltaTime);
-
+        if (animator != null)
+        {
+            animator.SetBool("isWalking", true); // เปิดใช้งาน Animation เดิน
+        }
         // เปลี่ยนทิศทางเมื่อถึงเป้าหมาย
         if (Vector2.Distance(transform.position, targetPoint.position) <= stopDistance)
         {
+            
             targetPoint = targetPoint == pointA ? pointB : pointA;
 
             // พลิก sprite
@@ -66,9 +75,14 @@ public class Ronin : Enemy
 
     private void Attack()
     {
-        // ตรวจสอบ cooldown
         if (Time.time - lastAttackTime >= attackCooldown)
         {
+            // ตรวจสอบว่า Animation ปัจจุบันไม่ได้อยู่ในสถานะโจมตี
+            if (animator != null && animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+            {
+                return; // ถ้า Animation โจมตีกำลังเล่นอยู่ ให้หยุด
+            }
+
             lastAttackTime = Time.time;
 
             // หันหน้าไปทาง Player
@@ -77,11 +91,8 @@ public class Ronin : Enemy
             // เล่น Animation การโจมตี
             if (animator != null)
             {
-                animator.SetTrigger("Attack");
+                animator.SetTrigger("Attack"); // เรียก Trigger Attack
             }
-
-            Debug.Log("Enemy attacks!");
-
             // ตรวจสอบว่า Player มีฟังก์ชัน TakeDamage แล้วเรียกใช้
             if (player.TryGetComponent(out PlayerMovement playerScript))
             {
@@ -130,39 +141,8 @@ public class Ronin : Enemy
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
-    /*
-    [SerializeField] private Vector2 velocity;
-    [SerializeField] private Transform[] movePoints;
-
-    public void Start()
-    {
-        Behavior();
-    }
-    public void Behavior()
-    {
-        rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
-        if (rb.position.x <= movePoints[0].position.x && velocity.x < 0)
-        {
-            FlipCharacter();
-           
-        }
-        else if (rb.position.x >= movePoints[1].position.x && velocity.x > 0)
-        {
-            FlipCharacter();
-        }
-
-
-    }
-    private void FlipCharacter()
-    {
-
-        velocity *= -1;
-        Vector2 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
-    }
-    */
+   
 
 
 
-}
+}*/

@@ -4400,7 +4400,7 @@ Transform:
   m_GameObject: {fileID: 200574509}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67.75, y: 15.44, z: -10}
+  m_LocalPosition: {x: 77.88, y: 14.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18511,11 +18511,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1818245128329165525, guid: 26b36821665e7984bac31973688c554d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67.75
+      value: 77.88
       objectReference: {fileID: 0}
     - target: {fileID: 1818245128329165525, guid: 26b36821665e7984bac31973688c554d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.69
+      value: 7.85
       objectReference: {fileID: 0}
     - target: {fileID: 1818245128329165525, guid: 26b36821665e7984bac31973688c554d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25812,7 +25812,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5265459515673702927, guid: 6e4cd406c3f8aca44b6762c769dcf94b, type: 3}
   firePoint: {fileID: 611874578}
   shootDelay: 2
-  maxHealth: 16
+  maxHealth: 1
 --- !u!58 &1151187744
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -27519,7 +27519,7 @@ Transform:
   m_GameObject: {fileID: 1207477925}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67.75, y: 15.44, z: -10}
+  m_LocalPosition: {x: 77.88, y: 14.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -10,7 +10,7 @@ public class Archer : MonoBehaviour
     public float shootDelay = 1f;
 
     // ระบบเลือด
-    public int maxHealth = 50;
+    public int maxHealth = 1;
     private int currentHealth;
 
     private bool isShooting = false;
@@ -62,10 +62,10 @@ public class Archer : MonoBehaviour
     }
 
     // ฟังก์ชันรับดาเมจ
-    public void TakeDamage(int damage)
+    public void TakeDamage(int attackDamage)
     {
-        currentHealth -= damage;
-        Debug.Log($"TakeDamage: {damage} HpRemaining: {currentHealth}");
+        currentHealth -=  attackDamage;
+        Debug.Log($"TakeDamage: { attackDamage} HpRemaining: {currentHealth}");
 
         // ตรวจสอบว่าเลือดหมด
         if (currentHealth <= 0)
@@ -93,52 +93,7 @@ public class Archer : MonoBehaviour
         }
 
         // ทำลายวัตถุหลังแอนิเมชันจบ (เช่น 1 วินาที)
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 3f);
     }
-    /*
-    public Animator animator; 
-    public GameObject projectilePrefab; 
-    public Transform firePoint; 
-    public float shootDelay = 1f; 
-    private bool isShooting = false; 
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player")) 
-        {
-            StartShooting();
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player")) 
-        {
-            StopShooting();
-        }
-    }
-
-    void StartShooting()
-    {
-        if (!isShooting)
-        {
-            isShooting = true;
-            animator.SetBool("IsShooting", true); 
-            InvokeRepeating("Shoot", 0f, shootDelay); 
-        }
-    }
-
-    void StopShooting()
-    {
-        isShooting = false;
-        animator.SetBool("IsShooting", false); 
-    }
-
-    void Shoot()
-    {
-        if (projectilePrefab != null && firePoint != null)
-        {
-            Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-        }
-    }*/
+    
 }

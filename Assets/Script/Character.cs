@@ -18,6 +18,8 @@ public class Character : MonoBehaviour
             health = value;
         }
     }
+    
+    
 
     public Animator anim;
     public Rigidbody2D rb;
@@ -43,9 +45,5 @@ public class Character : MonoBehaviour
         Debug.Log($"TakeDamage :{damage} HpRemainnig : {Health}");
         
     }
-    public void Innit(int newHealth)
-    {
-        Health = newHealth;
-
-    }
+    
 }
