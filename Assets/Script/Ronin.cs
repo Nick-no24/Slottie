@@ -4,62 +4,38 @@ using UnityEngine;
 
 public class Ronin : Enemy
 {
-    [SerializeField] private float speed = 1f;
-    [SerializeField] private Transform pointA;
-    [SerializeField] private Transform pointB;
+    public Transform pointA; // จุดที่ 1
+    public Transform pointB; // จุดที่ 2
+    public float speed = 2f; // ความเร็วในการเดิน
+    public float stopDistance = 0.1f; // ระยะที่ถือว่า "ถึง" เป้าหมาย
 
-    private Vector3 currentPosition;
-    private Transform currentTarget;
-    private bool isMovingToB = true;
+    private Transform targetPoint; // จุดเป้าหมายปัจจุบัน
+    private SpriteRenderer spriteRenderer;
 
-    private void Start()
+    void Start()
     {
-        currentPosition = transform.position;
-        currentTarget = pointA;
-        Behavior();
+        targetPoint = pointA; // เริ่มต้นที่จุด A
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void FixedUpdate()
+    void Update()
     {
-        Behavior();
-    }
+        // เดินไปยังจุดเป้าหมาย
+        transform.position = Vector2.MoveTowards(transform.position, targetPoint.position, speed * Time.deltaTime);
 
-    private void Behavior()
-    {
-        MoveTowardsTarget();
-        CheckTargetReached();
-    }
+        // Debug เพื่อดูระยะทาง
+        Debug.Log("Distance to target: " + Vector2.Distance(transform.position, targetPoint.position));
 
-    private void MoveTowardsTarget()
-    {
-        // ค่อยๆเคลื่อนที่ไปยังจุดเป้าหมายด้วย Lerp()
-        currentPosition = Vector3.Lerp(currentPosition, currentTarget.position, speed * Time.deltaTime);
-        transform.position = currentPosition;
-    }
-
-    private void CheckTargetReached()
-    {
-        // ตรวจสอบว่าถึงจุดเป้าหมายหรือยัง
-        if (Vector3.Distance(currentPosition, currentTarget.position) < 0.1f)
+        // เปลี่ยนทิศทางเมื่อถึงเป้าหมาย
+        if (Vector2.Distance(transform.position, targetPoint.position) <= stopDistance)
         {
-            SwitchTarget();
+            targetPoint = targetPoint == pointA ? pointB : pointA;
+
+            // พลิก sprite
+            spriteRenderer.flipX = !spriteRenderer.flipX;
+
+            Debug.Log("Switching target to: " + targetPoint.name);
         }
-    }
-
-    private void SwitchTarget()
-    {
-        // สลับจุดเป้าหมายระหว่าง A และ B
-        isMovingToB = !isMovingToB;
-        currentTarget = isMovingToB ? pointB : pointA;
-        FlipCharacter();
-    }
-
-    private void FlipCharacter()
-    {
-        // พลิกตัวละครให้หันไปตามทิศทาง
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
     }
     /*
     [SerializeField] private Vector2 velocity;
