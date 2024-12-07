@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public abstract class Character : MonoBehaviour
 {
+    
     [SerializeField] private int health;
     public int Health
     {
@@ -26,6 +28,7 @@ public abstract class Character : MonoBehaviour
     {
         if (IsDead())
         {
+
             Destroy(this.gameObject);
         }
     }
@@ -44,4 +47,5 @@ public abstract class Character : MonoBehaviour
         Health = newHealth;
         healthBar.SetMaxHealth(newHealth);
     }
+
 }

@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Arrow : Weapon
 {
     private Vector2 direction;
+    
     public float speed = 10f;
     public float lifetime = 3f; 
+    
 
     public void SetDirection(Vector2 dir)
     {
@@ -21,14 +24,15 @@ public class Arrow : Weapon
 
     private void Update()
     {
-       
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        Move();
+       //transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
 
    
     public override void Move()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+       transform.Translate(Vector2.left * speed * Time.deltaTime);
+       
     }
 
    
@@ -57,7 +61,7 @@ public class Arrow : Weapon
           
             Destroy(gameObject);
         }
-        else if (collision.CompareTag("Obstacle"))
+        else if (collision.CompareTag("Ground"))
         {
            
             Destroy(gameObject);
