@@ -2,48 +2,65 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow : MonoBehaviour
+public class Arrow : Weapon
 {
-    [SerializeField] private float speed = 10f; // ความเร็วของลูกธนู
-    [SerializeField] private float damage = 20f; // ความเสียหายที่สร้าง
-    [SerializeField] private float lifetime = 5f; // ระยะเวลาที่ลูกธนูจะถูกทำลายเอง
-
     private Vector2 direction;
+    public float speed = 10f;
+    public float lifetime = 3f; // เวลาที่ลูกธนูจะถูกทำลายหลังจากยิงออกไป
 
-    // เรียกใช้ตอนเริ่มต้น
-    private void Start()
+    public void SetDirection(Vector2 dir)
     {
-        // กำหนดเวลาให้ลูกธนูถูกทำลายอัตโนมัติ
-        Destroy(gameObject, lifetime);
+        direction = dir.normalized;
     }
 
-    // ตั้งค่าทิศทางการเคลื่อนที่ของลูกธนู
-    public void SetDirection(Vector2 direction)
+    private void Start()
     {
-        this.direction = direction.normalized; // กำหนดให้ทิศทางเป็นเวกเตอร์หน่วย
+        // ตั้งเวลาให้ลูกธนูถูกทำลายหลังจาก 3 วินาที
+        Destroy(gameObject, lifetime);
     }
 
     private void Update()
     {
-        // เคลื่อนที่ไปในทิศทางที่กำหนด
-        transform.Translate(direction * speed * Time.deltaTime);
+        // เคลื่อนที่ลูกธนูไปทางซ้าย
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
 
- 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    // ฟังก์ชัน Move (ยังคงใช้งานได้ตามเดิม)
+    public override void Move()
     {
-        // ตรวจสอบว่าชนกับวัตถุที่มีคอมโพเนนต์ "Player"
-        Player player = collision.GetComponent<Player>();
-        if (player != null)
-        {
-            player.TakeDamage(damage); // ลดพลังชีวิตผู้เล่น
-            Destroy(gameObject); // ทำลายลูกธนู
-        }
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
+    }
 
-        // ทำลายลูกธนูเมื่อชนกับสิ่งกีดขวาง (เช่น กำแพง)
-        if (collision.CompareTag("Obstacle"))
+    // ฟังก์ชันเมื่อชนกับผู้เล่น
+    public override void OnHitWith(Character character)
+    {
+        if (character is Player)
         {
+            character.TakeDamage(this.Damage);
+            Destroy(gameObject); // ทำลายลูกธนูเมื่อชนกับผู้เล่น
+        }
+    }
+
+    // ฟังก์ชันเมื่อชนกับสิ่งกีดขวาง
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // ตรวจสอบว่าชนกับผู้เล่นหรือไม่
+        if (collision.CompareTag("Player"))
+        {
+            var player = collision.GetComponent<Character>();
+            if (player != null)
+            {
+                // ลดเลือดผู้เล่น
+                player.TakeDamage(2);
+            }
+
+            // ทำลายลูกธนูหลังจากชน
             Destroy(gameObject);
         }
-    }*/
+        else if (collision.CompareTag("Obstacle"))
+        {
+            // กรณีชนสิ่งกีดขวาง
+            Destroy(gameObject);
+        }
+    }
 }

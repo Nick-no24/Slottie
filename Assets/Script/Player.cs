@@ -16,8 +16,8 @@ public class Player : Character, IShootable
         if (Input.GetButtonDown("Fire1") && BulletTimer <= 0)
         {
             GameObject obj = Instantiate(Bullets, BulletSpawnPoint.position, Quaternion.identity);
-            Banana banana = obj.GetComponent<Banana>();
-            banana.Innit(10, this);
+            Kunai kunai = obj.GetComponent<Kunai>();
+            kunai.Innit(10, this);
 
             BulletTimer = BulletSpawntime;
 
@@ -44,7 +44,7 @@ public class Player : Character, IShootable
     }
     public void Start()
     {
-        Innit(100);
+        Innit(20);
 
     }
 

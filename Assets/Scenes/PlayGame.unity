@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 973201}
   - component: {fileID: 973200}
   - component: {fileID: 973202}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (17)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1666,7 +1666,7 @@ GameObject:
   - component: {fileID: 106371821}
   - component: {fileID: 106371820}
   - component: {fileID: 106371819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1 (123)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2288,7 +2288,7 @@ GameObject:
   - component: {fileID: 117329216}
   - component: {fileID: 117329215}
   - component: {fileID: 117329217}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_156 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2755,7 +2755,7 @@ GameObject:
   - component: {fileID: 147538014}
   - component: {fileID: 147538016}
   - component: {fileID: 147538017}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3065,7 +3065,7 @@ GameObject:
   - component: {fileID: 149195735}
   - component: {fileID: 149195734}
   - component: {fileID: 149195736}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (7)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4137,7 +4137,7 @@ GameObject:
   - component: {fileID: 199718727}
   - component: {fileID: 199718726}
   - component: {fileID: 199718728}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4400,7 +4400,7 @@ Transform:
   m_GameObject: {fileID: 200574509}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.88, y: 14.6, z: -10}
+  m_LocalPosition: {x: 60.940002, y: 15.950001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4417,7 +4417,7 @@ GameObject:
   - component: {fileID: 203500833}
   - component: {fileID: 203500832}
   - component: {fileID: 203500834}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (12)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5146,7 +5146,7 @@ GameObject:
   - component: {fileID: 265169327}
   - component: {fileID: 265169326}
   - component: {fileID: 265169325}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1 (127)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5546,7 +5546,7 @@ GameObject:
   - component: {fileID: 279889581}
   - component: {fileID: 279889580}
   - component: {fileID: 279889582}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (6)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5765,7 +5765,7 @@ GameObject:
   - component: {fileID: 287912186}
   - component: {fileID: 287912185}
   - component: {fileID: 287912187}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (9)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5895,7 +5895,7 @@ GameObject:
   - component: {fileID: 290696564}
   - component: {fileID: 290696563}
   - component: {fileID: 290696565}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (26)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -6612,6 +6612,10 @@ PrefabInstance:
       value: PF Village Props - Platform 02 X4
       objectReference: {fileID: 0}
     - target: {fileID: 5200783512062404884, guid: 5e8d23661846f4140b8492397ab54a94, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5200783512062404884, guid: 5e8d23661846f4140b8492397ab54a94, type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
@@ -7270,7 +7274,7 @@ GameObject:
   - component: {fileID: 350596633}
   - component: {fileID: 350596632}
   - component: {fileID: 350596634}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (22)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -8970,7 +8974,7 @@ GameObject:
   - component: {fileID: 401956927}
   - component: {fileID: 401956926}
   - component: {fileID: 401956925}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_0 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -9677,7 +9681,7 @@ GameObject:
   - component: {fileID: 427873454}
   - component: {fileID: 427873453}
   - component: {fileID: 427873455}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (10)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -9961,7 +9965,7 @@ GameObject:
   - component: {fileID: 441651767}
   - component: {fileID: 441651768}
   - component: {fileID: 441651769}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Village Props - Obstacle Platform Large 02
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -11627,7 +11631,7 @@ GameObject:
   - component: {fileID: 503243824}
   - component: {fileID: 503243823}
   - component: {fileID: 503243825}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (23)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -12011,7 +12015,7 @@ GameObject:
   - component: {fileID: 510832980}
   - component: {fileID: 510832979}
   - component: {fileID: 510832981}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -12542,7 +12546,7 @@ GameObject:
   - component: {fileID: 540519263}
   - component: {fileID: 540519262}
   - component: {fileID: 540519264}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (24)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -12846,6 +12850,10 @@ PrefabInstance:
     - target: {fileID: 5373330553216305747, guid: 73a65c758e42a1345bc8efd2d3625ad6, type: 3}
       propertyPath: m_Name
       value: PF Village Props - Obstacle Platform X32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373330553216305747, guid: 73a65c758e42a1345bc8efd2d3625ad6, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5373330553216305747, guid: 73a65c758e42a1345bc8efd2d3625ad6, type: 3}
       propertyPath: m_TagString
@@ -14390,7 +14398,7 @@ GameObject:
   - component: {fileID: 609825053}
   - component: {fileID: 609825052}
   - component: {fileID: 609825054}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (25)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -14677,37 +14685,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 390740219}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &611874577
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 611874578}
-  m_Layer: 0
-  m_Name: Arrow_Spawnpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &611874578
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611874577}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.235, y: -0.108, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1151187740}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &614232084
 GameObject:
   m_ObjectHideFlags: 0
@@ -14719,7 +14696,7 @@ GameObject:
   - component: {fileID: 614232086}
   - component: {fileID: 614232085}
   - component: {fileID: 614232087}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (11)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -15455,7 +15432,7 @@ GameObject:
   - component: {fileID: 679915565}
   - component: {fileID: 679915566}
   - component: {fileID: 679915567}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Village Props - Obstacle Platform X24
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -15584,7 +15561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 685543920}
   - component: {fileID: 685543921}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -16583,7 +16560,7 @@ GameObject:
   - component: {fileID: 717519501}
   - component: {fileID: 717519500}
   - component: {fileID: 717519499}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1 (128)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -16848,7 +16825,7 @@ GameObject:
   - component: {fileID: 723390484}
   - component: {fileID: 723390483}
   - component: {fileID: 723390482}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1 (117)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -17068,6 +17045,10 @@ PrefabInstance:
     - target: {fileID: 5373330553216305747, guid: bef830e91c1190b4c9d6e834ace51fe4, type: 3}
       propertyPath: m_Name
       value: PF Village Props - Obstacle Platform Large 01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373330553216305747, guid: bef830e91c1190b4c9d6e834ace51fe4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5373330553216305747, guid: bef830e91c1190b4c9d6e834ace51fe4, type: 3}
       propertyPath: m_TagString
@@ -17428,7 +17409,7 @@ GameObject:
   - component: {fileID: 763977476}
   - component: {fileID: 763977475}
   - component: {fileID: 763977477}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_155 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -17941,7 +17922,7 @@ GameObject:
   - component: {fileID: 779647596}
   - component: {fileID: 779647595}
   - component: {fileID: 779647594}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1 (126)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -18507,19 +18488,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2079475249}
     m_Modifications:
     - target: {fileID: 1818245128329165525, guid: 26b36821665e7984bac31973688c554d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 77.88
+      value: -5.53
       objectReference: {fileID: 0}
     - target: {fileID: 1818245128329165525, guid: 26b36821665e7984bac31973688c554d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.85
+      value: 0.61
       objectReference: {fileID: 0}
     - target: {fileID: 1818245128329165525, guid: 26b36821665e7984bac31973688c554d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.062844925
       objectReference: {fileID: 0}
     - target: {fileID: 1818245128329165525, guid: 26b36821665e7984bac31973688c554d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18572,7 +18553,7 @@ PrefabInstance:
     - target: {fileID: 2826509236495900303, guid: 26b36821665e7984bac31973688c554d, type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 1192118794}
+      objectReference: {fileID: 0}
     - target: {fileID: 2826509236495900303, guid: 26b36821665e7984bac31973688c554d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -18609,7 +18590,12 @@ PrefabInstance:
       propertyPath: m_SpriteSortPoint
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7211800588619048688, guid: 26b36821665e7984bac31973688c554d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.254
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2826509236495900303, guid: 26b36821665e7984bac31973688c554d, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1528710829395075226, guid: 26b36821665e7984bac31973688c554d, type: 3}
     m_AddedGameObjects:
@@ -18621,117 +18607,15 @@ PrefabInstance:
       addedObject: {fileID: 1502128820}
     - targetCorrespondingSourceObject: {fileID: 1818245128329165525, guid: 26b36821665e7984bac31973688c554d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1192118789}
+      addedObject: {fileID: 2011234851}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2091285942755194718, guid: 26b36821665e7984bac31973688c554d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1808640852}
+      insertIndex: 1
+      addedObject: {fileID: 1808640863}
+    - targetCorrespondingSourceObject: {fileID: 2091285942755194718, guid: 26b36821665e7984bac31973688c554d, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1808640862}
   m_SourcePrefab: {fileID: 100100000, guid: 26b36821665e7984bac31973688c554d, type: 3}
---- !u!1001 &817904599
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1432365559552647627, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1432365559552647627, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7349911908766278724, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_Name
-      value: HPBar
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
 --- !u!1 &818010516
 GameObject:
   m_ObjectHideFlags: 0
@@ -18743,7 +18627,7 @@ GameObject:
   - component: {fileID: 818010518}
   - component: {fileID: 818010517}
   - component: {fileID: 818010519}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_155
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -19097,7 +18981,7 @@ GameObject:
   - component: {fileID: 836530291}
   - component: {fileID: 836530290}
   - component: {fileID: 836530292}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_156
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -20654,7 +20538,7 @@ GameObject:
   - component: {fileID: 937883227}
   - component: {fileID: 937883229}
   - component: {fileID: 937883230}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_0
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -21882,7 +21766,7 @@ GameObject:
   - component: {fileID: 986355702}
   - component: {fileID: 986355701}
   - component: {fileID: 986355700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1 (125)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -22607,111 +22491,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1002098422
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1808640857}
-    m_Modifications:
-    - target: {fileID: 1432365559552647627, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1432365559552647627, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7349911908766278724, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_Name
-      value: HPBar
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
 --- !u!1001 &1002823832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23928,7 +23707,7 @@ GameObject:
   - component: {fileID: 1073309255}
   - component: {fileID: 1073309254}
   - component: {fileID: 1073309256}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_32
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -25070,7 +24849,7 @@ GameObject:
   - component: {fileID: 1129146302}
   - component: {fileID: 1129146301}
   - component: {fileID: 1129146303}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_161 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -25200,7 +24979,7 @@ GameObject:
   - component: {fileID: 1129669294}
   - component: {fileID: 1129669293}
   - component: {fileID: 1129669295}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -25503,7 +25282,7 @@ GameObject:
   - component: {fileID: 1150594873}
   - component: {fileID: 1150594874}
   - component: {fileID: 1150594875}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_155 (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -25621,277 +25400,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!1 &1151187737
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1151187740}
-  - component: {fileID: 1151187739}
-  - component: {fileID: 1151187738}
-  - component: {fileID: 1151187742}
-  - component: {fileID: 1151187741}
-  - component: {fileID: 1151187743}
-  - component: {fileID: 1151187744}
-  - component: {fileID: 1151187745}
-  m_Layer: 10
-  m_Name: Samu_Acher
-  m_TagString: Enemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!95 &1151187738
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151187737}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d6a749f41a571cb4d82a1846e2c60dcf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!212 &1151187739
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151187737}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 907946014, guid: 38e17c0af4ae2f1488f3f5bc730e8ae4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1151187740
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151187737}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 73.79, y: 8.08, z: 0}
-  m_LocalScale: {x: -5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 611874578}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &1151187741
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151187737}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00000076293946, y: -0.2026002}
-  m_Size: {x: 0.2667801, y: 0.59479964}
-  m_Direction: 0
---- !u!50 &1151187742
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151187737}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
---- !u!114 &1151187743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151187737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1efb42faee2105943af9ee601f230b85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1151187738}
-  projectilePrefab: {fileID: 5265459515673702927, guid: 6e4cd406c3f8aca44b6762c769dcf94b, type: 3}
-  firePoint: {fileID: 611874578}
-  shootDelay: 2
-  maxHealth: 1
---- !u!58 &1151187744
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151187737}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.6463642, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.8334125
---- !u!61 &1151187745
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151187737}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 2.1906657, y: -0.28334856}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.6370106, y: 1.5666971}
   m_EdgeRadius: 0
 --- !u!4 &1151265970 stripped
 Transform:
@@ -26745,7 +26253,7 @@ GameObject:
   - component: {fileID: 1188185537}
   - component: {fileID: 1188185536}
   - component: {fileID: 1188185538}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -26948,22 +26456,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!224 &1192118789 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7496847951582996378, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-  m_PrefabInstance: {fileID: 1002098422}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1192118794 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1607952108885151270, guid: 4fce2b80fef1d364cbfcd25dcabd33c1, type: 3}
-  m_PrefabInstance: {fileID: 1002098422}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c14abf3e01e9849448fcb6511ce12841, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1197003627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27272,7 +26764,7 @@ GameObject:
   - component: {fileID: 1207045390}
   - component: {fileID: 1207045389}
   - component: {fileID: 1207045388}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1 (120)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -27519,7 +27011,7 @@ Transform:
   m_GameObject: {fileID: 1207477925}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.88, y: 14.6, z: -10}
+  m_LocalPosition: {x: 60.940002, y: 15.950001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28203,7 +27695,7 @@ GameObject:
   - component: {fileID: 1236995749}
   - component: {fileID: 1236995748}
   - component: {fileID: 1236995750}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (13)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -28679,7 +28171,7 @@ GameObject:
   - component: {fileID: 1264690921}
   - component: {fileID: 1264690922}
   - component: {fileID: 1264690923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_2 (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -29456,7 +28948,7 @@ GameObject:
   - component: {fileID: 1292222721}
   - component: {fileID: 1292222720}
   - component: {fileID: 1292222722}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_161
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -30330,7 +29822,7 @@ GameObject:
   - component: {fileID: 1325773373}
   - component: {fileID: 1325773372}
   - component: {fileID: 1325773374}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (5)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -30460,7 +29952,7 @@ GameObject:
   - component: {fileID: 1338835927}
   - component: {fileID: 1338835926}
   - component: {fileID: 1338835928}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_155 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -30591,7 +30083,7 @@ GameObject:
   - component: {fileID: 1342541185}
   - component: {fileID: 1342541184}
   - component: {fileID: 1342541183}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1 (122)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -30766,7 +30258,7 @@ GameObject:
   - component: {fileID: 1343407299}
   - component: {fileID: 1343407298}
   - component: {fileID: 1343407300}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (21)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -31503,7 +30995,7 @@ GameObject:
   - component: {fileID: 1375063331}
   - component: {fileID: 1375063330}
   - component: {fileID: 1375063329}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1 (124)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -33254,7 +32746,7 @@ GameObject:
   - component: {fileID: 1468797437}
   - component: {fileID: 1468797436}
   - component: {fileID: 1468797435}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1 (121)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -33893,7 +33385,7 @@ GameObject:
   - component: {fileID: 1497360716}
   - component: {fileID: 1497360718}
   - component: {fileID: 1497360719}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_2
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -34145,7 +33637,7 @@ GameObject:
   - component: {fileID: 1502961235}
   - component: {fileID: 1502961234}
   - component: {fileID: 1502961236}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -36101,6 +35593,10 @@ PrefabInstance:
       value: PF Village Props - Platform 01 R X1
       objectReference: {fileID: 0}
     - target: {fileID: 6072232795771451288, guid: faa8413b1d9e4cd48ab117de84514e7c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072232795771451288, guid: faa8413b1d9e4cd48ab117de84514e7c, type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
@@ -36220,7 +35716,7 @@ GameObject:
   - component: {fileID: 1653630207}
   - component: {fileID: 1653630206}
   - component: {fileID: 1653630208}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (20)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -37358,7 +36854,7 @@ GameObject:
   - component: {fileID: 1729121824}
   - component: {fileID: 1729121823}
   - component: {fileID: 1729121825}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_161 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -37572,7 +37068,7 @@ GameObject:
   - component: {fileID: 1733870286}
   - component: {fileID: 1733870285}
   - component: {fileID: 1733870287}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_32 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -38405,26 +37901,51 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 7077147229977198377, guid: 26b36821665e7984bac31973688c554d, type: 3}
   m_PrefabInstance: {fileID: 813226125}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1808640852
+--- !u!4 &1808640857 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1818245128329165525, guid: 26b36821665e7984bac31973688c554d, type: 3}
+  m_PrefabInstance: {fileID: 813226125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1808640862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808640845}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4567a70c4604cf40a120aef67545072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 10
   anim: {fileID: 0}
   rb: {fileID: 0}
---- !u!4 &1808640857 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1818245128329165525, guid: 26b36821665e7984bac31973688c554d, type: 3}
-  m_PrefabInstance: {fileID: 813226125}
+  healthBar: {fileID: 0}
+  <Bullets>k__BackingField: {fileID: 475961114707294392, guid: 5079e196fb47c1c409dc6053c1a0be6f, type: 3}
+  <BulletSpawnPoint>k__BackingField: {fileID: 1502128820}
+  <BulletSpawntime>k__BackingField: 1
+  <BulletTimer>k__BackingField: 1
+--- !u!114 &1808640863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808640845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8a84dab85ec7949a2a38b05b151ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 10
+  grounded: 0
+  groundCheck: {fileID: 2011234851}
+  groundRadius: 0.37
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 128
+  jumpForce: 700
 --- !u!1001 &1809255396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39392,7 +38913,7 @@ GameObject:
   - component: {fileID: 1835265313}
   - component: {fileID: 1835265312}
   - component: {fileID: 1835265314}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_158 (8)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -39734,7 +39255,7 @@ GameObject:
   - component: {fileID: 1849378250}
   - component: {fileID: 1849378249}
   - component: {fileID: 1849378248}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1 (119)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -41059,7 +40580,7 @@ GameObject:
   - component: {fileID: 1898190022}
   - component: {fileID: 1898190021}
   - component: {fileID: 1898190020}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_2 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -41478,7 +40999,7 @@ GameObject:
   - component: {fileID: 1915907524}
   - component: {fileID: 1915907523}
   - component: {fileID: 1915907525}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_156 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -41904,6 +41425,10 @@ PrefabInstance:
     - target: {fileID: 5373330553216305747, guid: 65321bf0311c2eb48be353666f829ca1, type: 3}
       propertyPath: m_Name
       value: PF Village Props - Jump Platform 01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373330553216305747, guid: 65321bf0311c2eb48be353666f829ca1, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5373330553216305747, guid: 65321bf0311c2eb48be353666f829ca1, type: 3}
       propertyPath: m_TagString
@@ -42912,6 +42437,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2011234850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2011234851}
+  m_Layer: 8
+  m_Name: GroundChack
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2011234851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011234850}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.224, y: -0.487, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1808640857}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2016066651
 GameObject:
   m_ObjectHideFlags: 0
@@ -43685,7 +43241,7 @@ GameObject:
   - component: {fileID: 2041950733}
   - component: {fileID: 2041950732}
   - component: {fileID: 2041950731}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1 (118)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -43922,7 +43478,7 @@ GameObject:
   - component: {fileID: 2050738639}
   - component: {fileID: 2050738638}
   - component: {fileID: 2050738640}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_32 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -44052,7 +43608,7 @@ GameObject:
   - component: {fileID: 2052473034}
   - component: {fileID: 2052473035}
   - component: {fileID: 2052473036}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_156 (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -44515,6 +44071,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 390740219}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2079475248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2079475249}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2079475249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079475248}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 66.47, y: 8.59, z: 0.062844925}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1808640857}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2081532760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44668,7 +44256,7 @@ GameObject:
   - component: {fileID: 2105452076}
   - component: {fileID: 2105452078}
   - component: {fileID: 2105452079}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TX Tileset Ground_1
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -45344,6 +44932,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &892023734938248647
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2601707390326672975, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 71.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601707390326672975, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601707390326672975, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601707390326672975, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601707390326672975, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601707390326672975, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601707390326672975, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601707390326672975, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601707390326672975, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601707390326672975, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3591968086773220901, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
+      propertyPath: m_Name
+      value: Samu_Acher
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562775135612994611, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1808640862}
+    - target: {fileID: 7562775135612994611, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
+      propertyPath: <BulletSpawntime>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8598c643fb1cfd541b54c3c446fde6f2, type: 3}
 --- !u!1001 &4023754971357999921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45414,7 +45067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3826508956540856863, guid: 9d816b171511caf4984ebe5bceec924f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4814468832689133173, guid: 9d816b171511caf4984ebe5bceec924f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45460,7 +45113,8 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1631092733937976573, guid: 9d816b171511caf4984ebe5bceec924f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -45470,7 +45124,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 562018816}
-  - {fileID: 813226125}
   - {fileID: 1521667457}
   - {fileID: 488664789}
   - {fileID: 685543920}
@@ -45478,7 +45131,7 @@ SceneRoots:
   - {fileID: 1019435798}
   - {fileID: 789937019}
   - {fileID: 1346576287}
-  - {fileID: 1151187740}
+  - {fileID: 892023734938248647}
   - {fileID: 77366135}
   - {fileID: 1461139401}
   - {fileID: 4023754971357999921}
@@ -45486,4 +45139,4 @@ SceneRoots:
   - {fileID: 1824892068}
   - {fileID: 1207477928}
   - {fileID: 324591636}
-  - {fileID: 817904599}
+  - {fileID: 2079475249}
