@@ -37,7 +37,7 @@ public abstract class Weapon : MonoBehaviour
     {
         float shootDir = shooter.BulletSpawnPoint.position.x - shooter.BulletSpawnPoint.parent.position.x;
         if (shootDir < 0)
-            return -1; //หันขวา
+            return -1; 
         else return 1;
     }
 
