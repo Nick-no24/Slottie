@@ -272,9 +272,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   attackRange: 20
   player: {fileID: 0}
-  <Bullets>k__BackingField: {fileID: 5265459515673702927, guid: 6e4cd406c3f8aca44b6762c769dcf94b, type: 3}
-  <BulletSpawnPoint>k__BackingField: {fileID: 5505004274730192539}
-  <BulletSpawntime>k__BackingField: 2
+  <Arrows>k__BackingField: {fileID: 5265459515673702927, guid: 6e4cd406c3f8aca44b6762c769dcf94b, type: 3}
+  <SpawnPoint>k__BackingField: {fileID: 5505004274730192539}
+  <ArrowSpawnTime>k__BackingField: 0
 --- !u!1 &5533601983419949081
 GameObject:
   m_ObjectHideFlags: 0

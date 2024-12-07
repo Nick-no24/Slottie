@@ -18,7 +18,7 @@ public class Arrow : Weapon
 
     private void Start()
     {
-        
+        //InnitWeapon(2, 3f, 10f, this.shooter);
         Destroy(gameObject, lifetime);
     }
 

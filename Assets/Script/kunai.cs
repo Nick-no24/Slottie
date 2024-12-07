@@ -9,7 +9,7 @@ public class Kunai : Weapon
 
     private void Start()
     {
-        Damage = 1;
+
         speed = 10.0f * GetShootDirection(); 
     }
 

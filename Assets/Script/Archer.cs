@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Acher : Enemy, IShootable
+public class Acher : Character, IShootable
 {
     [SerializeField] private float attackRange;
     public Player player;
-    [field: SerializeField] public GameObject Bullets { get; set; }
-    [field: SerializeField] public Transform BulletSpawnPoint { get; set; }
+    [field: SerializeField] public GameObject Arrows { get; set; }
+    [field: SerializeField] public Transform SpawnPoint { get; set; }
 
-    [field: SerializeField] public float BulletSpawntime { get; set; }
+    [field: SerializeField] public float ArrowSpawnTime { get; set; }
     public float BulletTimer { get; set; }
     private void Update()
     {
@@ -18,12 +18,12 @@ public class Acher : Enemy, IShootable
         Behavior();
         if (BulletTimer < 0f)
         {
-            BulletTimer = BulletSpawntime;
+            BulletTimer = ArrowSpawnTime;
         }
         Destroy();
 
     }
-    public override void Behavior()
+    public void Behavior()
     {
         Vector2 direction = player.transform.position - transform.position;
         float distance = direction.magnitude;
@@ -40,9 +40,9 @@ public class Acher : Enemy, IShootable
         if (BulletTimer <= 0)
         {
             anim.SetTrigger("Shoot");
-            GameObject obj = Instantiate(Bullets, BulletSpawnPoint.position, Quaternion.identity);
+            GameObject obj = Instantiate(Arrows, SpawnPoint.position, Quaternion.identity);
             Arrow arrow = obj.GetComponent<Arrow>();
-            arrow.Innit(20, this);
+            arrow.InnitWeapon(2, 3f, 10f, this);
         }
     }
     public void Start()

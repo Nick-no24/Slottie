@@ -20,12 +20,42 @@ public abstract class Weapon : MonoBehaviour
 
         }
     }
+    private float speed;
+    public float Speed
+    {
+        get
+        {
+            return speed;
+        }
+        set
+
+        {
+            speed = value;
+
+        }
+    }
+    private float lifetime;
+    public float LifeTime
+    {
+        get
+        {
+            return lifetime;
+        }
+        set
+
+        {
+            lifetime = value;
+
+        }
+    }
     protected IShootable shooter;
 
-    public void Innit(int _damage, IShootable _shooter)
+    public void InnitWeapon(int _damage,float _lifetime,float _speed, IShootable _shooter)
     {
         Damage = _damage;
         shooter = _shooter;
+        Speed = _speed;
+        lifetime = _lifetime;
 
     }
 
@@ -35,7 +65,7 @@ public abstract class Weapon : MonoBehaviour
 
     public int GetShootDirection()
     {
-        float shootDir = shooter.BulletSpawnPoint.position.x - shooter.BulletSpawnPoint.parent.position.x;
+        float shootDir = shooter.SpawnPoint.position.x - shooter.SpawnPoint.parent.position.x;
         if (shootDir < 0)
             return -1; 
         else return 1;

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public interface IShootable
 {
-    Transform BulletSpawnPoint { get; set; }
+    Transform SpawnPoint { get; set; }
 
 
-    GameObject Bullets { get; set; }
+    GameObject Arrows { get; set; }
 
-    float BulletSpawntime { get; set; }
+    float ArrowSpawnTime { get; set; }
     float BulletTimer { get; set; }
     void Shoot();
 }
